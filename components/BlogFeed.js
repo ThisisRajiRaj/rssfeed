@@ -34,7 +34,7 @@ class BlogFeed {
     const text = bp.getArticleText().substring(0, 200); */
     this.feed.addItem({
       title: post.title,
-      id: post.title,
+      guid:`${this.siteURL}/blog/${post.name}`,
       link: `${this.siteURL}/blog/${post.name}`,
       date: new Date(post.date),
       /*content: text,
