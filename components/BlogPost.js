@@ -23,7 +23,7 @@ class BlogPost {
   // Read from the file system
    async readArticleFile(filename) {
     const fetch = require("node-fetch");
-    const t = await fetch(`https://www.rajiraj.com/posts/${filename}.txt`);
+    const t = await fetch(process.env.POST_CONTENT_URL + "/" +filename + ".txt");
     this.filetext = await t.text();
   }
 }

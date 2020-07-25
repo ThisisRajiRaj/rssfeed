@@ -5,7 +5,7 @@ class ArticleIndex {
 
   getIndex() {
     const fetch = require("node-fetch");
-    return fetch("http://rajiraj.com/posts/articleIndex.json")
+    return fetch(process.env.INDEX_URL)
       .then((response) =>
       {
          return response.json();
